@@ -1,3 +1,6 @@
+This repo provide a tool to convert some notes in markdown format to fortune cookie data.
+Inspired by [ruanyf/fortunes](https://github.com/ruanyf/fortunes)
+
 ## What is Fortune?
 
 Fortune is a simple Unix program that displays a random message from a database of quotations.
@@ -8,17 +11,6 @@ $ fortune
 "What we see is mainly what we look for."
   ~Unknown
 ```
-
-This repo contains some fortune database files, especially useful for Chinese user.
-
-- note_fortunes: quotes in English, 5472 items
-- chinese: quotes in Chinese, 25919 items
-- tang300: poems of Tang Dynasty in Chinese, 313 items
-- song100: poems of Song Dynasty in Chinese, 95 items
-
-## Screenshot
-
-![](./screenshot.png)
 
 ## Install
 
@@ -36,8 +28,11 @@ Then install the repo.
 
 ```bash
 $ git clone git@github.com:kk17/note_fortunes.git
+# Debian/Ubuntu
 $ cd note_fortunes
 $ ./install.sh
+# Mac
+# TODO
 ```
 
 ## Usage
