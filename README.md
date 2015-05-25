@@ -32,7 +32,13 @@ $ git clone git@github.com:kk17/note_fortunes.git
 $ cd note_fortunes
 $ ./install.sh
 # Mac
-# TODO
+$ git clone git@github.com:kk17/note_fortunes.git
+$ cd note_fortunes
+$ python note2data.py
+$ ls  -l `which fortune`
+$ lrwxr-xr-x  /usr/local/bin/fortune -> ../Cellar/fortune/9708/bin/fortune
+$ cp data/* /usr/local/Cellar/fortune/9708/share/games/fortunes/
+$ fortune 100% refactor_your_wetware
 ```
 
 ## Usage
@@ -92,7 +98,7 @@ Depending on which shell you use, at the end of your `~/.bashrc` or `~/.zshrc` f
 echo
 echo "=============== Quote Of The Day ==============="
 echo
-fortune
+fortune 100% refactor_your_wetware
 echo
 echo "================================================"
 echo
