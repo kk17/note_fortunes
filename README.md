@@ -28,17 +28,8 @@ Then install the repo.
 
 ```bash
 $ git clone git@github.com:kk17/note_fortunes.git
-# Debian/Ubuntu
 $ cd note_fortunes
 $ ./install.sh
-# Mac
-$ git clone git@github.com:kk17/note_fortunes.git
-$ cd note_fortunes
-$ python note2data.py
-$ ls  -l `which fortune`
-$ lrwxr-xr-x  /usr/local/bin/fortune -> ../Cellar/fortune/9708/bin/fortune
-$ cp data/* /usr/local/Cellar/fortune/9708/share/games/fortunes/
-$ fortune 100% refactor_your_wetware
 ```
 
 ## Usage
@@ -106,31 +97,29 @@ echo
 
 ## How to make your own fortune database file
 
-(1) Write your fortune items into a file.
-
-(2) Append a percent sign (%) after each item. The percent sign should take a new line. The following is an example.
+(1) Write your fortune items into a text file in markdown format,and put it in notes diretory. The following is an example.
 
 ```
-A day for firm decisions!!!!!  Or is it?
-%
-A few hours grace before the madness begins again.
-%
-A gift of a flower will soon be made to you.
-%
-A long-forgotten loved one will appear soon.
+#《程序员的思维修炼》
 
-Buy the negatives at any price.
-%
-A tall, dark stranger will have more fun than you.
+##攀登德雷斯福的阶梯
+1. 培养更多的直觉 R型模式
+2. 认识到情境和观察情境模式的重要性
+3. 更好地利用我们自己的经验
+
+##积极的实践需要四个条件
+1. 需要一个明确定义的任务
+2. 任务需要有适当的难度，有挑战但可行
+3. 任务环境可以提供大量的反馈，以便于你采取行动
+4. 提供重复犯错和纠正错误的机会
 ```
 
-(3) Generate the index file.
+(2) run install command.
 
 ```bash
-strfile -c % your-fortune-file your-fortune-file.dat
+./install.sh
 ```
 
-(4) Move the fortune file and its index file into `/usr/share/games/note_fortunes/`.
 
 ## License
 
